@@ -49,8 +49,8 @@
             zoomControl:true, maxZoom:28, minZoom:1
         })
         var hash = new L.Hash(map);
-        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
-        var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+        map.attributionControl.setPrefix('<a>Copyright © 2023</a> &middot; <a>Geomatic</a> &middot; <a>Amal</a>');
+        var autolinker = new Autolinker({truncate: {length: 5, location: 'smart'}});
         L.control.locate({locateOptions: {maxZoom: 19}}).addTo(map);
         var measureControl = new L.Control.Measure({
             position: 'topleft',
@@ -563,7 +563,7 @@
         bounds_group.addLayer(layer_RegardsTelecom_7);
         map.addLayer(layer_RegardsTelecom_7);
         map.createPane('pane_OpenStreetMap_8');
-        map.getPane('pane_OpenStreetMap_8').style.zIndex = 408;
+        map.getPane('pane_OpenStreetMap_8').style.zIndex = 0;
         var layer_OpenStreetMap_8 = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             pane: 'pane_OpenStreetMap_8',
             opacity: 1.0,
@@ -600,3 +600,4 @@
         </script>
     </body>
 </html>
+
